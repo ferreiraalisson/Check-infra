@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Check-list de Infraestrutura</title>
+  <meta name="description" content="Check-list de manutenção predial — registro rápido pelo celular." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">INFRA
+      <div class="icone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="20" height="20" class="logo">
+          <path d="M35,5 C55,5 75,15 85,25 C70,20 50,15 30,15 C15,15 5,10 0,5 C15,0 25,5 35,5 Z" fill="#004a80"/>
+          <path d="M10,45 C30,25 60,15 100,30 C80,35 40,55 15,60 C5,60 0,55 10,45 Z" fill="#ff911a"/>
+          <path d="M10,45 C0,35 5,20 20,20 C15,30 10,40 10,45 Z" fill="#ffb884" fill-opacity="0.7"/>
+        </svg>
+      </div>
+    COPA</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Check-list</a>
+      <a href="ocorrencias.html" class="nav-link">Ocorrências</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <span class="now-value" id="nowValue">—</span>
+    <section class="hero">
+      <h1>CHECK-LIST INFRA</h1>
+      <div class="descricao">
+        <p class="muted">Seção para registrar a conferência dos pontos de atenção da infraestrutura da unidade. Toque no item, marque a condição e envie.</p>
+      </div>
+      <div class="user-row">
+        <label for="userName">NOME E SOBRENOME</label>
+        <input id="userName" type="text" placeholder="Ex.: João da Silva" autocomplete="name" />
+      </div>
+      <div class="filters" id="filterBar"></div>
+    </section>
+
+    <section id="checklistGrid" class="grid"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modal de registro -->
+  <div id="modal" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-head">
+        <h2 id="modalTitle">Registrar</h2>
+        <button class="icon-btn" id="closeModal" aria-label="Fechar">✕</button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-foot">
+        <button class="btn ghost" id="cancelBtn">Cancelar</button>
+        <button class="btn primary" id="saveBtn">Salvar registro</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/checklist-data.js"></script>
+  <script src="js/checklist.js"></script>
+</body>
+</html>

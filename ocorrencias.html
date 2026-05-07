@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Registro de Ocorrências</title>
+  <meta name="description" content="Registre ocorrências de infraestrutura predial em segundos." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">CHECK
+      <img 
+        src="https://img.icons8.com/?size=30&id=rZg8l5ZYxpnn&format=png&color=e50914" 
+        alt="Ícone"
+        class="brand-icon"
+      >
+    INFRA</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Check-list</a>
+      <a href="ocorrencias.html" class="nav-link active">Ocorrências</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Nova ocorrência</h1>
+    </section>
+
+    <div class="descricao">
+      <p class="muted">Viu algo irregular?</p>
+      <p class="muted">Registre em poucos toques.</p>
+      <br>
+      <p class="muted">Use o formulário abaixo para registrar qualquer ocorrência relacionada à infraestrutura da unidade. Quanto mais detalhes, melhor.</p>
+    </div>
+
+    <form id="ocoForm" class="card form">
+      <div class="field">
+        <label for="ocoNome">Seu nome</label>
+        <input id="ocoNome" type="text" required placeholder="Ex.: João da Silva" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="ocoLocal">Local</label>
+        <input id="ocoLocal" type="text" required placeholder="Ex.: 5º andar - banheiro masculino" />
+      </div>
+
+      <div class="field">
+        <label for="ocoTipo">Tipo de demanda</label>
+        <select id="ocoTipo" required>
+          <option value="">Selecione...</option>
+          <option>Elétrica</option>
+          <option>Hidráulica</option>
+          <option>Civil</option>
+          <option>Refrigeração</option>
+          <option>Pintura</option>
+          <option>Serviço externo</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="ocoDescricao">Descrição</label>
+        <textarea id="ocoDescricao" rows="4" required placeholder="Descreva brevemente o que observou."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="ocoFoto">Foto (opcional)</label>
+        <input id="ocoFoto" type="file" accept="image/*" capture="environment" />
+        <img class="photo-preview" id="ocoFotoPreview" alt="Pré-visualização" />
+      </div>
+
+      <button class="btn primary block" type="submit">Enviar ocorrência</button>
+    </form>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ocorrencias.js"></script>
+</body>
+</html>
