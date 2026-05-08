@@ -56,7 +56,7 @@
         </div>
         <p class="desc">${i.desc}</p>
         <div class="card-actions">
-          <button class="btn primary" data-action="open">Registrar</button>
+          <button class="btn primary" data-action="open">REGISTRAR</button>
         </div>
       </article>
     `).join("");
@@ -126,7 +126,7 @@
   }
 
   function openModal(item) {
-    modalTitle.textContent = item.local;
+    modalTitle.innerHTML = item.local;
     modalBody.innerHTML = buildForm(item);
     modal.hidden = false;
   }

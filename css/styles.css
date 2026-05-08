@@ -9,7 +9,7 @@
   --muted: #9a9aae;
   /* --primary: #e50914; */
   --primary: #f7941d;
-  --primary-hov: #ff1f29;
+  --primary-hov: #004C94;
   --second-hov: rgb(133, 221, 0);
   --success: #22c55e;
   --warn: #f59e0b;
@@ -17,7 +17,8 @@
   --radius: 14px;
   --radius-sm: 10px;
   --shadow: 0 10px 30px rgba(0,0,0,.45);
-  --gradient: linear-gradient(135deg, #e50914 0%, #7a0610 100%);
+  /* --gradient: linear-gradient(135deg, #e50914 0%, #7a0610 100%); */
+  --gradient: linear-gradient(135deg, #f7941d 0%, #d9780f 100%);
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -82,8 +83,8 @@ body {
 .container { max-width: 1080px; margin: 0 auto; padding: 5px 20px; }
 .hero h1 { font-size: 28px; margin: 8px 0; letter-spacing: -.5px; text-align: center; }
 .muted { color: var(--muted); margin: 0; }
-.descricao { max-width: 300px; margin: 0 auto;}
-.descricao p { text-indent: 14px; text-align: justify; line-height: 1.5; margin: 0;}
+.description { max-width: 300px; margin: 0 auto;}
+.description p { text-indent: 14px; text-align: justify; line-height: 1.5; margin: 0;}
 
 /* ===== Linha data/hora atual ===== */
 
@@ -134,7 +135,7 @@ body {
   display: flex; align-items: center; justify-content: space-between;
   gap: 8px; padding-left: 8px;
 }
-.card h3 { margin: 0; font-size: 16px; }
+.card h3 { margin: 0; font-size: 16px; font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: 1px;}
 .card .desc { color: var(--muted); font-size: 13px; padding-left: 8px; flex: 1; }
 .card .meta {
   display: flex; gap: 8px; align-items: center; padding-left: 8px;
@@ -170,7 +171,7 @@ body {
   font-weight: 700; font-size: 14px; cursor: pointer; transition: all .15s;
   font-family: inherit;
 }
-.btn.primary { background: var(--gradient); color: #fff; box-shadow: 0 4px 16px rgba(229,9,20,.3); }
+.btn.primary { background: var(--gradient); color: #fff; box-shadow: 0 4px 16px rgba(0, 76, 148, .3); }
 .btn.primary:hover { background: var(--primary-hov); filter: brightness(1.05); }
 .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
 .btn.ghost:hover { color: var(--text); border-color: var(--text); }

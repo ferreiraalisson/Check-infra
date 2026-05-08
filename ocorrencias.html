@@ -9,13 +9,15 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">CHECK
-      <img 
-        src="https://img.icons8.com/?size=30&id=rZg8l5ZYxpnn&format=png&color=e50914" 
-        alt="Ícone"
-        class="brand-icon"
-      >
-    INFRA</div>
+    <div class="brand">INFRA
+      <div class="icone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="20" height="20" class="logo">
+          <path d="M35,5 C55,5 75,15 85,25 C70,20 50,15 30,15 C15,15 5,10 0,5 C15,0 25,5 35,5 Z" fill="#004a80"/>
+          <path d="M10,45 C30,25 60,15 100,30 C80,35 40,55 15,60 C5,60 0,55 10,45 Z" fill="#ff911a"/>
+          <path d="M10,45 C0,35 5,20 20,20 C15,30 10,40 10,45 Z" fill="#ffb884" fill-opacity="0.7"/>
+        </svg>
+      </div>
+    COPA</div>
     <nav class="nav">
       <a href="index.html" class="nav-link">Check-list</a>
       <a href="ocorrencias.html" class="nav-link active">Ocorrências</a>
@@ -24,19 +26,17 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Nova ocorrência</h1>
+      <h1>NOVA OCORRÊNCIA</h1>
     </section>
-
-    <div class="descricao">
-      <p class="muted">Viu algo irregular?</p>
-      <p class="muted">Registre em poucos toques.</p>
-      <br>
-      <p class="muted">Use o formulário abaixo para registrar qualquer ocorrência relacionada à infraestrutura da unidade. Quanto mais detalhes, melhor.</p>
-    </div>
+      <div class="description">
+        <p class="muted">Viu algo irregular?</p>
+        <p class="muted">Use o formulário abaixo para registrar ocorrências relacionadas à infraestrutura da unidade. Relate qualquer problema, dano ou situação que necessite de atenção. Quanto mais detalhes você fornecer, melhor será para a equipe de manutenção entender e resolver o problema.</p>
+      </div>
+    
 
     <form id="ocoForm" class="card form">
       <div class="field">
-        <label for="ocoNome">Seu nome</label>
+        <label for="ocoNome">NOME E SOBRENOME</label>
         <input id="ocoNome" type="text" required placeholder="Ex.: João da Silva" autocomplete="name" />
       </div>
 
@@ -70,7 +70,7 @@
         <img class="photo-preview" id="ocoFotoPreview" alt="Pré-visualização" />
       </div>
 
-      <button class="btn primary block" type="submit">Enviar ocorrência</button>
+      <button class="btn primary block" type="submit">ENVIAR OCORRÊNCIA</button>
     </form>
   </main>
 
