@@ -93,14 +93,18 @@
       case "ok_nok":
         html += field("Condição", radio("condicao", ["OK", "Atenção", "Problema"]));
         break;
+      case "portas":
+        html += field("Condição", radio("condicao", ["OK", "Atenção", "Problema"]));
+        html += field("Portas fechadas?", radio("fechado", ["Sim", "Não"]));
+        break;
       case "condicao":
         html += field("Condição do ambiente/equipamento", radio("condicao", ["Boa", "Regular", "Ruim"]));
-        html += field("Estações/portas fechadas?", radio("fechado", ["Sim", "Não", "N/A"]));
+        html += field("Estações fechadas?", radio("fechado", ["Sim", "Não"]));
         break;
       case "bomba":
         html += field("Condição da bomba", radio("condicao", ["Boa", "Regular", "Ruim"]));
         html += field("Modo", radio("modo", ["Automático", "Manual"]));
-        html += field("Bomba ativa", radio("bomba", ["Bomba 1", "Bomba 2", "Ambas", "Nenhuma"]));
+        html += field("Bomba ativa", radio("bomba", ["Bomba 1", "Bomba 2", "Nenhuma"]));
         break;
       case "hidrometro":
         html += field("Registro", radio("registro", ["Aberto", "Fechado"]));
@@ -134,32 +138,6 @@
   closeModal.addEventListener("click", closeM);
   cancelBtn.addEventListener("click", closeM);
   modal.addEventListener("click", (e) => { if (e.target === modal) closeM(); });
-
-  // ===== Compressão de imagem =====
-  function compressImage(file, maxDim, quality) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const img = new Image();
-        img.onload = () => {
-          let { width, height } = img;
-          if (width > height && width > maxDim) {
-            height = Math.round(height * maxDim / width); width = maxDim;
-          } else if (height > maxDim) {
-            width = Math.round(width * maxDim / height); height = maxDim;
-          }
-          const canvas = document.createElement("canvas");
-          canvas.width = width; canvas.height = height;
-          canvas.getContext("2d").drawImage(img, 0, 0, width, height);
-          resolve(canvas.toDataURL("image/jpeg", quality));
-        };
-        img.onerror = reject;
-        img.src = reader.result;
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  }
 
   // ===== Salvar =====
   saveBtn.addEventListener("click", async () => {

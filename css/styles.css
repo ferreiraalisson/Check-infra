@@ -135,7 +135,7 @@ body {
   display: flex; align-items: center; justify-content: space-between;
   gap: 8px; padding-left: 8px;
 }
-.card h3 { margin: 0; font-size: 16px; font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: 1px;}
+.card h3 { margin: 0; font-size: 24px; font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: 1px;}
 .card .desc { color: var(--muted); font-size: 13px; padding-left: 8px; flex: 1; }
 .card .meta {
   display: flex; gap: 8px; align-items: center; padding-left: 8px;
@@ -171,7 +171,7 @@ body {
   font-weight: 700; font-size: 14px; cursor: pointer; transition: all .15s;
   font-family: inherit;
 }
-.btn.primary { background: var(--gradient); color: #fff; box-shadow: 0 4px 16px rgba(0, 76, 148, .3); }
+.btn.primary { background: var(--gradient); color: var(--text); box-shadow: 0 4px 16px rgba(0, 76, 148, .3); }
 .btn.primary:hover { background: var(--primary-hov); filter: brightness(1.05); }
 .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
 .btn.ghost:hover { color: var(--text); border-color: var(--text); }
@@ -196,7 +196,7 @@ textarea { resize: vertical; }
 input[type="file"] { padding: 8px; }
 
 .field { display: grid; gap: 6px; margin-bottom: 14px; }
-.field label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.field label { font-size: 12px; color: var(--text); text-transform: uppercase; letter-spacing: 1px; }
 
 .form { padding: 20px; margin-top: 20px;}
 
@@ -249,6 +249,10 @@ input[type="file"] { padding: 8px; }
 }
 .options input[type=radio]:checked + label {
   background: var(--gradient); color: #fff; border-color: transparent;
+}
+
+#modalTitle{
+   margin: 0; font-size: 24px; font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: 1px;
 }
 
 /* ===== Toast ===== */
