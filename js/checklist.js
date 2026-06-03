@@ -91,10 +91,10 @@
 
     switch (item.tipo) {
       case "ok_nok":
-        html += field("Condição", radio("condicao", ["OK", "Atenção", "Problema"]));
+        html += field("Condição", radio("condicao", ["Boa", "Atenção", "Problema"]));
         break;
       case "portas":
-        html += field("Condição", radio("condicao", ["OK", "Atenção", "Problema"]));
+        html += field("Condição", radio("condicao", ["Boa", "Atenção", "Problema"]));
         html += field("Portas fechadas?", radio("fechado", ["Sim", "Não"]));
         break;
       case "condicao":
@@ -115,7 +115,7 @@
         html += field("Condição da estrutura", radio("condicao", ["Boa", "Regular", "Ruim"]));
         break;
       case "limpeza":
-        html += field("Condição", radio("condicao", ["Boa", "Suja", "Crítica"]));
+        html += field("Condição", radio("condicao", ["Boa", "Sujo", "Crítica"]));
         html += field("Limpeza realizada?", radio("limpeza", ["Sim", "Não", "Parcial"]));
         break;
       case "cpd":
@@ -123,7 +123,7 @@
         html += field("Câmeras", radio("cameras", ["Funcionando", "Com falha"]));
         break;
       default:
-        html += field("Status", radio("status", ["OK", "Problema"]));
+        html += field("Status", radio("status", ["Boa", "Problema"]));
     }
     html += field("Observação (opcional)", `<textarea name="obs" rows="3" placeholder="Algo a anotar?"></textarea>`);
     return html;
