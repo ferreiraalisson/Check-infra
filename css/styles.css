@@ -83,7 +83,7 @@ body {
 .container { max-width: 1080px; margin: 0 auto; padding: 5px 20px; }
 .hero h1 { font-size: 28px; margin: 8px 0; letter-spacing: -.5px; text-align: center; }
 .muted { color: var(--muted); margin: 0; }
-.description { max-width: 300px; margin: 0 auto;}
+.description { max-width: 400px; margin: 0 auto;}
 .description p { text-indent: 14px; text-align: justify; line-height: 1.5; margin: 0;}
 
 /* ===== Linha data/hora atual ===== */
@@ -268,3 +268,49 @@ input[type="file"] { padding: 8px; }
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 .toast.ok { border-color: var(--success); }
 .toast.err { border-color: var(--danger); }
+
+/* ===== To-Do ===== */
+.toDo-container{
+  max-width: 450px;
+  margin: 20px auto 0;
+}
+
+.toDo-header{
+  text-align: center;
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #102F5e;
+  margin-bottom: 20px;
+}
+
+.toDo-header h1{
+  margin-bottom: 0px;
+}
+
+.todo-btn{
+  background-color: #FDFDFD;
+  color: #102F5e;
+  border: 2px solid #102F5e;
+  border-radius: 5px;
+  padding: .3rem .6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:0.3s;
+}
+
+.todo-btn:hover{
+  background-color: #102F5e;
+  color: #FDFDFD;
+}
+
+.hide{
+  display: none;
+}
+
+#toDo-input, #edit-input, #search-input, #filter-select{
+  padding: 0.25rem 0.5rem;
+}
+
+

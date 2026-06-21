@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="icon" href="https://img.icons8.com/?size=30&id=IqYejp8HuOoA&format=png&color=f7941d" sizes="32x32">
+    <title>ZeloInfra</title>
+    <meta name="description" content="Check-list de manutenção predial — registro rápido pelo celular." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/toDo.js" defer></script>
+    
+</head>
+
+<body> 
+    <div class="toDo-container">
+        
+        <header class="toDo-header">
+            <h1>Tarefas</h1>
+            <p class="muted">Atividades e manutenções a fazer</p>
+        </header>
+
+        <form id="toDo-form">
+            <label>Nova Tarefa</label>
+            <div class="form-control">
+                <input type="text" id="toDo-input" placeholder="Digite sua tarefa aqui...">
+                <button type="submit" class="todo-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <form id="edit-form" class="">
+            <p>Edite a tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input" placeholder="Edite sua tarefa aqui...">
+                <button type="submit" class="todo-btn">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn" class="todo-btn">Cancelar</button>
+        </form>
+        <div id="toDo-tool">
+            <div id="toDo-search">
+                <form>
+                    <input type="text" id="search-input" placeholder="Pesquisar tarefas...">
+                    <button id="erase-button">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="toDo-filter">
+            <h4>Filtrar:</h4>
+            <select id="filter-select">
+                <option value="all">Todas</option>
+                <option value="completed">Completas</option>
+                <option value="uncompleted">Incompletas</option>
+            </select>
+        </div>
+        <div id="toDo-list">
+            <div class="toDo">
+                <h3>Fazendo alguma coisa...</h3>
+                <button class="finish-toDo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-toDo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove-toDo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
