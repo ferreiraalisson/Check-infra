@@ -153,8 +153,6 @@ Durante a evolução do projeto também identifiquei a necessidade de reduzir a 
 
 Foram implementados mecanismos de cifragem/tratamento dos dados e ajustes na separação entre informações de controle interno e informações destinadas à visualização.
 
-> **Observação:** detalhes de implementação relacionados à segurança não são expostos neste repositório quando podem revelar informações sensíveis da infraestrutura ou do ambiente corporativo.
-
 ---
 
 ## 🎨 UX e evolução da interface
